@@ -2,6 +2,7 @@ import "./index.css";
 import { BsHeart } from "react-icons/bs";
 
 function App(props) {
+  // console.log("productProps", props);
   return (
     <div className='product'>
       <div className='whiteContainer'>

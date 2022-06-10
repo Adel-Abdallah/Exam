@@ -1,14 +1,16 @@
 .container {
   background-color: #ffffff;
+  border-radius: 5%;
   width: 400px;
   padding: 30px;
   margin-top: 10px;
 }
 
 .notification-container {
-  display: flex;
-  margin-top: 10px;
-  padding: 10px;
+  margin-bottom: 35px;
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  grid-template-rows: 1fr;
 }
 
 .notification-card-wrapper {
@@ -16,14 +18,21 @@
   width: 400px;
 }
 
-.not-title {
-  font-size: 15px;
-  font-weight: bold;
-}
-
-.noti {
-  margin-left: 20;
-}
 .icons {
   font-size: 15px;
+  margin: auto;
+}
+.x {
+  font-size: 18px;
+  margin: auto;
+  font-weight: bold;
+}
+.title {
+  font-size: 15px;
+  font-weight: bold;
+  display: block;
+}
+.description {
+  font-size: 14px;
+  display: block;
 }

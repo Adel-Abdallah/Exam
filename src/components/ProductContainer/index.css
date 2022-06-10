@@ -6,6 +6,7 @@
 }
 
 .whiteContainer {
+  border-radius: 5%;
   background-color: #ffffff;
   width: 400px;
   padding: 30px;
@@ -66,7 +67,7 @@
 }
 
 .lighter {
-  color: #f7f7f7;
+  color: black;
   line-height: 1.2em;
   height: 3.6em;
   overflow: hidden;
