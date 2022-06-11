@@ -2,10 +2,9 @@ import "./index.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { BsHeart } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-const accessToken =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkNvZGVyIn0.B1QyKzKxzpxay1__A8B85ij32rqFoOIAFGDqBmqXhvs";
-
+const accessToken = process.env.REACT_APP_TOKEN;
 const apiUrl = "https://sw-coding-challenge.herokuapp.com/api/v1";
 
 const authAxios = axios.create({
@@ -33,14 +32,16 @@ function AllProducts() {
       {products.map(product => (
         <div className='all-products-wrapper'>
           <div className='card-container'>
-            <div className='img-container'>
-              <div className='icon-wrapper'>
-                <BsHeart className='icon' />
+            <Link to='detailProduct'>
+              <div className='img-container'>
+                <div className='icon-wrapper'>
+                  <BsHeart className='icon' />
+                </div>
+                <div>
+                  <img className='img' src={product.imageUrl} alt='api' />
+                </div>
               </div>
-              <div>
-                <img className='img' src={product.imageUrl} alt='api' />
-              </div>
-            </div>
+            </Link>
             <div className='spans-wrapper'>
               <span className='lighter'>
                 <b className='normal'> {product.name} </b>

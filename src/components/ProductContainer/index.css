@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: row;
   height: auto;
+  border-radius: 5%;
   margin-top: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .whiteContainer {
@@ -19,18 +21,12 @@
   font-weight: bolder;
   text-decoration: none;
 }
-/* .more Link {
-  text-decoration: none;
-} */
 
 .recommended {
   font-weight: bold;
   font-size: 20px;
 }
 
-/* .img-container {
-
-} */
 .card-container {
   display: flex;
   flex-direction: column;

@@ -16,8 +16,8 @@ function productContainer(props) {
           </span>
         </div>
         <div className='cards-wrapper'>
-          {props.products.map(product => (
-            <div className='card-container'>
+          {props.products.map((product, index) => (
+            <div className='card-container' key={index}>
               <div className='img-container'>
                 <div className='icon-wrapper'>
                   <BsHeart className='icon' />

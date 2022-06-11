@@ -2,12 +2,11 @@ import "./index.css";
 import { RiNotification2Line } from "react-icons/ri";
 
 function notificationContainer(props) {
-  console.log("notificationProps", props);
   return (
     <div className='container'>
       <div className='notification-card-wrapper'>
-        {props.notifications.map(notification => (
-          <div className='notification-container'>
+        {props.notifications.map((notification, index) => (
+          <div className='notification-container' key={index}>
             <div className='icons'>
               <RiNotification2Line />
             </div>
