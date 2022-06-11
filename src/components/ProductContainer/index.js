@@ -1,7 +1,8 @@
 import "./index.css";
 import { BsHeart } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
-function App(props) {
+function productContainer(props) {
   // console.log("productProps", props);
   return (
     <div className='product'>
@@ -9,9 +10,7 @@ function App(props) {
         <div className='one'>
           <span className='recommended'>Recommended for you</span>
           <span>
-            <a className='more' href='#more'>
-              See more
-            </a>
+            <Link to='/all-products'>See more</Link>
           </span>
         </div>
         <div className='cards-wrapper'>
@@ -22,7 +21,7 @@ function App(props) {
                   <BsHeart className='icon' />
                 </div>
                 <div>
-                  <img className='img' src={product.imageUrl} alt='macbook' />
+                  <img className='img' src={product.imageUrl} alt='api' />
                 </div>
               </div>
               <div className='spans-wrapper'>
@@ -40,4 +39,4 @@ function App(props) {
   );
 }
 
-export default App;
+export default productContainer;

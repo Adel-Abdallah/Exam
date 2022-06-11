@@ -1,0 +1,14 @@
+.all-product-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  background-color: #fff;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+  padding: 1rem;
+}
+.all-products-wrapper {
+  display: flex;
+  justify-content: center;
+}

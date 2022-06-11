@@ -1,7 +1,7 @@
 import "./index.css";
 import { RiNotification2Line } from "react-icons/ri";
 
-function App(props) {
+function notificationContainer(props) {
   console.log("notificationProps", props);
   return (
     <div className='container'>
@@ -24,4 +24,4 @@ function App(props) {
   );
 }
 
-export default App;
+export default notificationContainer;
