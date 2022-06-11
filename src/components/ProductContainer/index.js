@@ -9,8 +9,10 @@ function productContainer(props) {
       <div className='whiteContainer'>
         <div className='one'>
           <span className='recommended'>Recommended for you</span>
-          <span>
-            <Link to='/all-products'>See more</Link>
+          <span className='more'>
+            <Link className='more' to='/all-products'>
+              See more
+            </Link>
           </span>
         </div>
         <div className='cards-wrapper'>

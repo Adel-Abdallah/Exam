@@ -15,8 +15,13 @@
 .more {
   colore: rgb(0, 102, 255);
   float: right;
-  font-size: 14px;
+  font-size: 18px;
+  font-weight: bolder;
+  text-decoration: none;
 }
+/* .more Link {
+  text-decoration: none;
+} */
 
 .recommended {
   font-weight: bold;
