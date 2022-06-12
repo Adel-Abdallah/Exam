@@ -5,3 +5,12 @@
   justify-content: space-evenly;
   margin: 100px 200px;
 }
+
+@media (max-width: 800px) {
+  .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px;
+  }
+}
