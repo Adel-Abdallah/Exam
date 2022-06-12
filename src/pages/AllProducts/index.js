@@ -2,7 +2,7 @@ import "./index.css";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { BsHeart } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const accessToken = process.env.REACT_APP_TOKEN;
 const apiUrl = "https://sw-coding-challenge.herokuapp.com/api/v1";
@@ -13,9 +13,16 @@ const authAxios = axios.create({
     Authorization: `Bearer ${accessToken}`
   }
 });
+
 function AllProducts() {
   const [products, setProducts] = useState([]);
-
+  const navigate = useNavigate();
+  const handleClick = data => {
+    console.log(data);
+    navigate(`/detailProduct`, {
+      state: data
+    });
+  };
   useEffect(() => {
     authAxios
       .get(`${apiUrl}/products`)
@@ -30,18 +37,19 @@ function AllProducts() {
   return (
     <div className='all-product-card'>
       {products.map(product => (
-        <div className='all-products-wrapper'>
+        <div
+          className='all-products-wrapper'
+          onClick={() => handleClick(product)}>
           <div className='card-container'>
-            <Link to='detailProduct'>
-              <div className='img-container'>
-                <div className='icon-wrapper'>
-                  <BsHeart className='icon' />
-                </div>
-                <div>
-                  <img className='img' src={product.imageUrl} alt='api' />
-                </div>
+            <div className='img-container'>
+              <div className='icon-wrapper'>
+                <BsHeart className='icon' />
               </div>
-            </Link>
+              <div>
+                <img className='img' src={product.imageUrl} alt='api' />
+              </div>
+            </div>
+
             <div className='spans-wrapper'>
               <span className='lighter'>
                 <b className='normal'> {product.name} </b>
