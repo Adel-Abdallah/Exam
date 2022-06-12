@@ -3,7 +3,6 @@ import { BsHeart } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
 function productContainer(props) {
-  // console.log("productProps", props);
   return (
     <div className='product'>
       <div className='whiteContainer'>
