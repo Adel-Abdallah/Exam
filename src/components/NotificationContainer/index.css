@@ -22,11 +22,13 @@
 .icons {
   font-size: 15px;
   margin: auto;
+  cursor: pointer;
 }
 .x {
   font-size: 18px;
   margin: auto;
   font-weight: bold;
+  cursor: pointer;
 }
 .title {
   font-size: 15px;

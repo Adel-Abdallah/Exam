@@ -1,8 +1,14 @@
 import "./index.css";
 import { BsHeart } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function productContainer(props) {
+function ProductContainer(props) {
+  const navigate = useNavigate();
+  const handleClick = data => {
+    navigate(`/detailProduct`, {
+      state: data
+    });
+  };
   return (
     <div className='product'>
       <div className='whiteContainer'>
@@ -21,7 +27,7 @@ function productContainer(props) {
                 <div className='icon-wrapper'>
                   <BsHeart className='icon' />
                 </div>
-                <div>
+                <div onClick={() => handleClick(product)}>
                   <img className='img' src={product.imageUrl} alt='api' />
                 </div>
               </div>
@@ -40,4 +46,4 @@ function productContainer(props) {
   );
 }
 
-export default productContainer;
+export default ProductContainer;

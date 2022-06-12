@@ -10,6 +10,9 @@
   background-color: #ffffff;
   padding: 30px;
 }
+.one1 {
+  margin: 16px;
+}
 
 .full-details-wrapper {
   display: flex;
@@ -30,7 +33,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #f1f1f1;
-  border-radius: 5%;
 }
 .img1 {
   height: 250px;
@@ -44,6 +46,7 @@
   align-items: center;
   justify-content: center;
   padding: 30px;
+  cursor: pointer;
 }
 .pro-details {
   font-weight: bold;
