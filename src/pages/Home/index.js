@@ -2,7 +2,6 @@ import "./index.css";
 import Spinner from "../Spinner";
 import axios from "axios";
 import React, { useState, useEffect } from "react";
-import Header from "../../components/Header";
 import ProductCountainer from "../../components/ProductContainer";
 import NotificationCountainer from "../../components/NotificationContainer";
 
@@ -47,7 +46,6 @@ function AllProducts() {
   return (
     <div className=''>
       <div className='card'>
-        <Header />
         <div className='row'>
           {isLoading ? (
             <Spinner />

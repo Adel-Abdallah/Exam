@@ -1,11 +1,11 @@
 import "./index.css";
-
+import { Link } from "react-router-dom";
 function App() {
   return (
     <div className='header'>
-      <a href='#default' className='logo'>
+      <Link to='/' className='logo'>
         APPVENTURE
-      </a>
+      </Link>
     </div>
   );
 }
